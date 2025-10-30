@@ -1,16 +1,16 @@
 import { ViewConfig } from '@vaadin/hilla-file-router/types.js';
+import React from 'react';
+import { LoginForm } from '@vaadin/react-components/LoginForm.js';
 
 export const config: ViewConfig = {
   menu: { order: 4, icon: 'line-awesome/svg/basketball-ball-solid.svg' },
-  title: 'Hobbies',
+  title: 'LogIn',
 };
 
-export default function HobbiesView() {
+export default function LogInView() {
   return (
-    <div className="flex flex-col h-full items-center justify-center p-l text-center box-border">
-      <img style={{ width: '200px' }} src="images/empty-plant.png" />
-      <h2>This place intentionally left empty</h2>
-      <p>It’s a place where you can grow your own UI 🤗</p>
-    </div>
+        <div className="login-rich-content">
+          <LoginForm theme="dark" no-autofocus />
+        </div>
   );
 }
